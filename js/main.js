@@ -37,13 +37,33 @@ $( document ).ready(function() {
 		
 	});//deleteInput
 	
-	$("#getButtonValue").click(function () {
+	$("#getValue").click(function () {
  
 		var msg = '';
 		for(i=1; i<counter; i++){
-   	  		msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val();
+   	  		msg += "\n Textbox #" + i + " : " + $('#ingredient' + i).val();
 		}
     	alert(msg);
      });//value
 
-});
+	
+	$("#addSub").click(function () {
+		
+		console.log("add recipe clicked");
+		var title = $("#title").val();
+		var desc = $("#description").val();
+		var category = $("#category  option:selected").val();
+		var directions = $("#directions").val();
+		
+		var ingredients = '';
+		for(i=1; i<counter; i++){
+   	  		ingredients += "\n" + $('#ingredient' + i).val();
+		}
+		
+		
+		return false;
+		
+	});//addSub
+
+});//document ready
+

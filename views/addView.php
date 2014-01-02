@@ -40,6 +40,7 @@
 	<div id="inputGroup">
 		<input type="submit" id="addInput" class="btn" value="Add Input" />
 		<input type="submit" id="deleteInput" class="btn" value="Delete Input" />
+		<!--<input type="submit" id="getValue" class="btn" value="Get Inputs" /> -->
 		
 		<label for="ingredient1">Ingredient 1:</label>
 		<input type="text" name="ingredient1" id="ingredient1" />
@@ -59,9 +60,3 @@
 	<input type="submit" name="addSub" id="addSub" class="btn" value="Add Recipe" />
 	
 </form>
-
-
-<ul>
-<li>foo</li>
-<li>bar</li>
-</ul>
