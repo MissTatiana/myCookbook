@@ -185,15 +185,13 @@ textarea {
 	margin: 0 0 5px 0;
 }
 
-#addInput {
-	position: absolute;
-	left: 500px;
+#inputGroup {
+	width: 300px;
+	float: left;
 }
 
-#deleteInput {
-	position: absolute;
-	left: 500px;
-	margin: 25px 0 0 0;
+#dir {
+	clear: left;
 }
 
 #addSub {

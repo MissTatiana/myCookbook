@@ -36,26 +36,33 @@
 		    <option>Holidays</option>
 		</select>
 	</div>
+
 	
-	<div id="inputGroup">
-		<input type="submit" id="addInput" class="btn" value="Add Input" />
-		<input type="submit" id="deleteInput" class="btn" value="Delete Input" />
-		<!--<input type="submit" id="getValue" class="btn" value="Get Inputs" /> -->
+	<div id="dients">
 		
-		<label for="ingredient1">Ingredient 1:</label>
-		<input type="text" name="ingredient1" id="ingredient1" />
-		<br />
 		
-		<label for="ingredient2">Ingredient 2:</label>
-		<input type="text" name="ingredient2" id="ingredient2" />
-		<br />
+		<div id="inputGroup">
+			<label for="ingredient1">Ingredient 1:</label>
+			<input type="text" name="ingredient1" id="ingredient1" />
+			<br />
 		
-	</div><!-- inputGroup -->
+			<label for="ingredient2">Ingredient 2:</label>
+			<input type="text" name="ingredient2" id="ingredient2" />
+			<br />
+		</div><!-- inputGroup -->
+		
+		<div id="inputBtns">	
+			<input type="submit" id="addInput" class="btn" value="Add Input" />
+			<br />
+			<input type="submit" id="deleteInput" class="btn" value="Delete Input" />
+		</div><!-- inputBtns -->
+
+	</div><!-- dients -->
 	
-	<div>
+	<div id="dir">
 		<label for="directions">Directions:</label>
 		<textarea id="directions" name="directions" rows="10" cols="50"></textarea>
-	</div>
+	</div><!-- dir -->
 	
 	<input type="submit" name="addSub" id="addSub" class="btn" value="Add Recipe" />
 	
