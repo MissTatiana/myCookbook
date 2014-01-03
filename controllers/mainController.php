@@ -31,9 +31,7 @@ elseif($action == 'insertRecipe') {
 	
 	$recipe->addRecipe($title, $description, $category, $ingredients, $directions);
 	
-	$view->getViews('views/header.php', 'views/homeView.php', 'views/footer.php');
-	
-	echo $title . $description . $category . $ingredients . $directions;
+	$view->getView('views/redirect.php');
 	
 }
 

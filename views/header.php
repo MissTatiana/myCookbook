@@ -12,7 +12,9 @@
 <div class="wrap">
 	
 	<div id="header">
-		<img id="logo" src="../images/logo.png" width="200" height="109" />
+		<a href="?action=home">
+			<img id="logo" src="../images/logo.png" width="200" height="109" />
+		</a>
 		
 		<br />
 		<br />
