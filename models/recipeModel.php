@@ -2,9 +2,22 @@
 
 class recipeModel {
 	
-	//READ
+/*	=	=	=	=	=	=	=	=	= 	=	=	=	=	=	=	=	=	=
+							Read
+=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	*/
 	
-	//CREATE
+	function getRecipes() {
+		$db = new PDO("mysql:host=localhost; dbname=myCookbook", "root", "root");
+		
+		//may just have links that go to individual category pages
+		
+		
+	}
+	
+	
+/*	=	=	=	=	=	=	=	=	= 	=	=	=	=	=	=	=	=	=
+							Create
+=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	*/
 	function addRecipe($title, $description, $category, $ingredients, $directions) {
 		$db = new PDO("mysql:host=localhost; dbname=myCookbook", "root", "root");
 		
@@ -21,10 +34,14 @@ class recipeModel {
 		$st->execute();
 		
 	}//end addRecipe
+
+/*	=	=	=	=	=	=	=	=	= 	=	=	=	=	=	=	=	=	=
+							Update
+=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	*/
 	
-	//UPDATE
-	
-	//DELETE
+/*	=	=	=	=	=	=	=	=	= 	=	=	=	=	=	=	=	=	=
+							Delete
+=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	*/
 	
 }//end recipeModel
 

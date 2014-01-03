@@ -14,6 +14,9 @@ else {
 
 //Hope page
 if($action == 'home') {
+	
+	$results['data'] = $
+	
 	$view->getViews('views/header.php', 'views/homeView.php', 'views/footer.php');
 }//end home
  
