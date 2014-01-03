@@ -3,7 +3,7 @@
 <br />
 <br />
 <br />
-<form name="addRecipe" method="post">
+<form name="addRecipe" id="addRecipe" method="post" action="?action=insertRecipe">
 	
 	<div>
 		<label for="title">Recipe Title:</label>
@@ -38,7 +38,7 @@
 	</div>
 
 	
-	<div id="dients">
+	<!-- <div id="dients">
 		
 		
 		<div id="inputGroup">
@@ -49,15 +49,20 @@
 			<label for="ingredient2">Ingredient 2:</label>
 			<input type="text" name="ingredient2" id="ingredient2" />
 			<br />
-		</div><!-- inputGroup -->
+		</div><!-- inputGroup
 		
 		<div id="inputBtns">	
 			<input type="submit" id="addInput" class="btn" value="Add Input" />
 			<br />
 			<input type="submit" id="deleteInput" class="btn" value="Delete Input" />
-		</div><!-- inputBtns -->
+		</div><!-- inputBtns
 
 	</div><!-- dients -->
+	
+	<div>
+		<label for="ingredients">Ingredients:</label>
+		<textarea id="ingredients" name="ingredients" rows="10" cols="50"></textarea>
+	</div>
 	
 	<div id="dir">
 		<label for="directions">Directions:</label>

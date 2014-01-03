@@ -8,7 +8,7 @@ class recipeModel {
 	function addRecipe($title, $description, $category, $ingredients, $directions) {
 		$db = new PDO("mysql:host=localhost; dbname=myCookbook", "root", "root");
 		
-		$query = "insert into recipes(title, description, category, ingredients, direction)
+		$query = "insert into recipes(title, description, category, ingredients, directions)
 				  values(:title, :description, :category, :ingredients, :directions)";
 		
 		$st = $db->prepare($query);
@@ -20,7 +20,7 @@ class recipeModel {
 		
 		$st->execute();
 		
-	}
+	}//end addRecipe
 	
 	//UPDATE
 	

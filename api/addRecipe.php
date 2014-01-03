@@ -1,5 +1,15 @@
 <?php 
 
+$title = $_POST['title'];
+$description = $_POST['description'];
+$category = $_POST['category'];
+$ingredients = $_POST['ingredients'];
+$directions = $_POST['directions'];
+
+//echo $title . $description . $category . $ingredients . $directions;
+
+addRecipe($title, $description, $category, $ingredients, $directions);
+
 function addRecipe($title, $description, $category, $ingredients, $directions) {
 	$db = new PDO("mysql:host=localhost; dbname=myCookbook", "root", "root");
 	

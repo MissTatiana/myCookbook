@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 	
 	//Add additional inputs for ingredients
 	var counter = 3;
@@ -46,24 +46,44 @@ $( document ).ready(function() {
     	alert(msg);
      });//value
 
+/*	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=
+ * 						Add to db
+ =	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	*/	
+	var addRecipe = function() {
 	
-	$("#addSub").click(function () {
-		
-		console.log("add recipe clicked");
-		var title = $("#title").val();
-		var desc = $("#description").val();
-		var category = $("#category  option:selected").val();
-		var directions = $("#directions").val();
-		
-		var ingredients = '';
-		for(i=1; i<counter; i++){
-   	  		ingredients += "\n" + $('#ingredient' + i).val();
-		}
-		
-		
-		return false;
-		
-	});//addSub
+		$("#addSub").click(function () {
+			
+			console.log("add recipe clicked");
+			var title = $("#title").val();
+			var desc = $("#description").val();
+			var category = $("#category  option:selected").val();
+			var directions = $("#directions").val();
+			
+			var ingredients = '';
+			for(i=1; i<counter; i++){
+	   	  		ingredients += "\n" + $('#ingredient' + i).val();
+			}
+			
+			$.ajax ({
+				type: "post",
+				dataType: "json",
+				url: "../controllers/mainController.php",
+				data: {
+					title: title,
+					description: desc, 
+					category: category, 
+					ingredients: ingredients,
+					directions: directions
+				},
+				success: function (response) {
+					console.log(response);
+				}
+			});//end ajax
+			
+			
+		});//addSub
+	};//end addRecipe
+	
 
 });//document ready
 
