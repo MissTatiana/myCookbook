@@ -1,9 +1,14 @@
 <?php 
 
+//MODELS
 include('models/viewModel.php');
 $view = new viewModel();
 include('models/recipeModel.php');
 $recipe = new recipeModel();
+
+//VIEWS
+$header = 'views/header.php';
+$footer = 'views/footer.php';
 
 if(empty($_GET['action'])) {
 	$action = 'home';
@@ -14,13 +19,13 @@ else {
 
 //Hope page
 if($action == 'home') {
-	
-	$view->getViews('views/header.php', 'views/homeView.php', 'views/footer.php');
+	$results['data'] = $recipe->getRecipes();
+	$view->getViews($header, 'views/homeView.php', $footer, $results);
 }//end home
  
 //Go to add recipe view
 elseif($action == 'addRecipe') {
-	$view->getViews('views/header.php', 'views/addView.php', 'views/footer.php');
+	$view->getViews($header, 'views/addView.php', $footer);
 }//end addRecipe
 
 elseif($action == 'insertRecipe') {
@@ -35,5 +40,14 @@ elseif($action == 'insertRecipe') {
 	$view->getView('views/redirect.php');
 	
 }
+
+elseif($action == 'recipe') {
+	$id = $_GET['id'];
+	
+	$singleRecipe['data'] = $recipe->getRecipe($id);
+	
+	$view->getViews($header, 'views/recipeView.php', $footer, $singleRecipe);
+	
+}//end recipe
 
 ?>

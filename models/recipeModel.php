@@ -9,9 +9,32 @@ class recipeModel {
 	function getRecipes() {
 		$db = new PDO("mysql:host=localhost; dbname=myCookbook", "root", "root");
 		
-		//may just have links that go to individual category pages
+		$query = "select id, title, category
+				  from recipes";
 		
+		$st = $db->prepare($query);
 		
+		$st->execute();
+		
+		$result = $st->fetchAll();
+		
+		return $result;
+		
+	}//end getRecipes
+	
+	function getRecipe($id) {
+		$db = new PDO("mysql:host=localhost; dbname=myCookbook", "root", "root");
+		
+		$query = 'select id, title, description, ingredients, directions
+				  from recipes';
+				  
+		$st = $db->prepare($query);
+		
+		$st->execute();
+		
+		$result = $st->fetchAll();
+		
+		return $result;	
 	}
 	
 	
