@@ -34,6 +34,7 @@
 		    <option>Canning/Freezing</option>
 		    <option>Breads</option>
 		    <option>Holidays</option>
+		    <option>College Meals</option>
 		</select>
 	</div>
 
